@@ -11,6 +11,8 @@ public class Asignatura {
         this.codigo = codigo;
         this.nombre = nombre;
         this.creditos = creditos;
+        this.alumno = null;
+        this.profesor = null;
     }
 
     public String getCodigo() {
@@ -44,15 +46,10 @@ public class Asignatura {
         System.out.println("Codigo: " + codigo);
         System.out.println("Nombre: " + nombre);
         System.out.println("Creditos: " + creditos);
-        if (profesor != null) {
-            System.out.println("Profesor: No asignado" );
-        }else{
-            System.out.println("Profesor\n" + profesor.getNombre());
-        }
-        if (alumno != null) {
-            System.out.println("Alumno: No asignado" );
-        }else{
-            System.out.println("Alumno\n" + alumno.getNombre());
-        }
+        if (profesor == null) {System.out.println("Profesor: No asignado");}
+        else {System.out.println("Profesor:\n" + profesor.getNombre()+" "+profesor.getApellido());}
+        if (alumno == null) {System.out.println("Alumno: No asignado");}
+        else {System.out.println("Alumno:\n" + alumno.getNombre()+" "+alumno.getApellido());}
+
     }
 }

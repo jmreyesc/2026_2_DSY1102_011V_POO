@@ -1,11 +1,14 @@
 package org.example;
 
+import java.time.LocalDate;
+
 public class Profesor extends Persona implements ParticipanteAcademico {
     String especialidad;
     int horasSemanales;
     Asignatura asignatura;
 
-    public Profesor(String especialidad, int horasSemanales, Asignatura asignatura) {
+    public Profesor(String run, String nombre, String apellido, LocalDate fechaNacimiento, String especialidad, int horasSemanales, Asignatura asignatura) {
+        super(run, nombre, apellido, fechaNacimiento);
         this.especialidad = especialidad;
         this.horasSemanales = horasSemanales;
         this.asignatura = asignatura;
@@ -40,7 +43,7 @@ public class Profesor extends Persona implements ParticipanteAcademico {
         super.mostrarDatosPersonales();
         System.out.println("Especialidad: "+especialidad);
         System.out.println("Horas Semanales: "+horasSemanales);
-        asignatura.mostrarAsignatura();
+        System.out.println("Asignatura: " + getAsignatura().nombre);
 
     }
 

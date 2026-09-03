@@ -1,6 +1,6 @@
 package org.example;
-
 import java.time.LocalDate;
+
 
 public class Alumno extends Persona implements ParticipanteAcademico {
     int numeroMatricula;
@@ -43,7 +43,7 @@ public class Alumno extends Persona implements ParticipanteAcademico {
         super.mostrarDatosPersonales();
         System.out.println("Matricula: " + getNumeroMatricula());
         System.out.println("Promedio: " + getPromedio());
-        asignatura.mostrarAsignatura();
+        System.out.println("Asignatura: " + getAsignatura().nombre);
     }
 
     @Override
